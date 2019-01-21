@@ -1,7 +1,7 @@
 # Личный проект «Нёрдс»
 
 * Студент: [Uladzimir Sabadash](https://up.htmlacademy.ru/htmlcss/24/user/894583).
-* Наставник: `Неизвестно`.
+* Наставник: [Андрей Островский](https://htmlacademy.ru/profile/grandmaus).
 
 ---
 
