@@ -51,13 +51,13 @@ a {
 
 .site-navigation,
 .developments-list {
-  list-style: none;
+    list-style: none;
 }
 
 .site-navigation a {
-  font-weight: 500;
-  text-transform: uppercase;
-  color: #000000;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #000000;
 }
 
 .site-navigation a:hover,
@@ -106,7 +106,7 @@ a {
     background-color: #e5a722;
 }
 
-.inner-page .main-title {
+.main-title {
     font-size: 55px;
     line-height: 55px;
     font-weight: 700;
@@ -157,6 +157,10 @@ a {
     list-style: none; 
 }
 
+.catalog-item {
+    width: 360px;
+}
+
 .catalog-item-title {
     font-size: 18px;
     line-height: 30px;
@@ -166,10 +170,13 @@ a {
 }
 
 .browser {
+    height: 40px;
+
+    background: url(../img/browser.svg) no-repeat;
     opacity: 0.12;
 }
 
-.item-image:hover + .browser {
+.catalog-item:hover > .browser {
     opacity: 1;
 }
 
@@ -182,13 +189,13 @@ a {
     color: #000000;
 }
 
-.footer-be-friendns b {
+.footer-text b {
     font-size: 36px;
     line-height: 36px;
     font-weight: 700;
 }
 
-.footer-be-friendns span {
+.footer-text span {
     font-size: 16px;
     line-height: 22px;
     font-weight: 400;
@@ -211,29 +218,29 @@ a {
 
 .modal-write-us input,
 .modal-write-us textarea {
-  font: inherit;
-  color: rgba(68,68,68,0.5);
-  font-weight: 400;
+    font: inherit;
+    color: rgba(68,68,68,0.5);
+    font-weight: 400;
 
-  background-color: #ffffff;
-  border: 2px solid #d7dcde;
+    background-color: #ffffff;
+    border: 2px solid #d7dcde;
 } 
 
 .modal-write-us input:hover,
 .modal-write-us textarea:hover {
-  border: 2px solid #b4b9bb;
+    border-color: #b4b9bb;
 } 
 
 .modal-write-us input:focus,
 .modal-write-us textarea:focus {
-  color: rgba(68,68,68,1);
+    color: rgba(68,68,68,1);
 
-  border: 2px solid #000000;
+    border-color: #000000;
 } 
 
 .modal-write-us input:invalid,
 .modal-write-us textarea:invalid {
-  color: #e74246;
+    color: #e74246;
 
-  border: 2px solid #e74246;
+    border-color: #e74246;
 } 
