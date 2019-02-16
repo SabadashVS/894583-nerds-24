@@ -1,0 +1,239 @@
+body {
+    margin: 0;
+    padding: 0;
+  
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #000000;
+    
+    background-color: #ffffff;
+}
+
+a {
+    text-decoration: none;
+}
+
+.button {
+    font: inherit;
+    line-height: 18px;
+    font-weight: 500;
+    color: #ffffff;
+  
+    text-align: center;    
+    vertical-align: middle;
+    text-transform: uppercase;
+  
+    background-color: #fb565a;
+    border: none;
+}
+
+.button:hover,
+.button:focus {
+    background-color: #e74246;
+}
+
+.button:active {
+    color: rgba(255,255,255,0.3);
+
+    background-color: #d7373b;
+    box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
+}
+
+.main-navigation {
+    font-size: 16px;
+    line-height: 30px;
+    color: #000000;
+  
+    background-color: #eeeeee;
+}
+
+.site-navigation,
+.developments-list {
+  list-style: none;
+}
+
+.site-navigation a {
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus {
+    color: #fb565a;
+}
+
+.site-navigation a:active {
+    color: rgba(0,0,0,0.3);
+}
+.site-navigation-current {
+    border-bottom: 2px solid #fb565a;
+}
+
+.main-header-logo:hover {
+    opacity: 0.8;
+}
+
+.main-header-logo:active {
+    opacity: 0.3;
+}
+
+.btn-buy-app {
+    background-color: #00ca74;
+}
+
+.btn-buy-app:hover,
+.btn-buy-app:focus {
+    background-color: #00bc6c;
+}
+
+.btn-buy-app:active {
+    background-color: #00aa62;
+}
+
+.btn-buy-presentation {
+    background-color: #efc84a;
+}
+
+.btn-buy-presentation:hover,
+.btn-buy-presentation:focus {
+    background-color: #eab534;
+}
+
+.btn-buy-presentation:active {
+    background-color: #e5a722;
+}
+
+.inner-page .main-title {
+    font-size: 55px;
+    line-height: 55px;
+    font-weight: 700;
+    color: #000000;
+}
+
+.filters fieldset {
+    border: none;
+}
+
+.filters legend {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 700;
+    color: #000000;
+}
+
+.filters ul {
+    color: #283136;
+    line-height: 20px;
+    list-style: none; 
+}
+
+.filter-input:disabled + label {
+    opacity: 0.3;
+}
+
+.btn-filter {
+    color: #000000;
+
+    background-color: #eeeeee;
+}
+
+.btn-filter:hover,
+.btn-filter:focus {
+    background-color: #dfdfdf;
+}
+
+.btn-filter:active {
+    color: rgba(0,0,0,0.3);
+
+    background-color: #d5d5d5;
+}
+
+.catalog-list {
+    color: #666666;
+    line-height: 18px;
+    list-style: none; 
+}
+
+.catalog-item-title {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.browser {
+    opacity: 0.12;
+}
+
+.item-image:hover + .browser {
+    opacity: 1;
+}
+
+.footer-social {
+    list-style: none;
+}
+
+.main-footer a {
+    font: inherit;
+    color: #000000;
+}
+
+.footer-be-friendns b {
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: 700;
+}
+
+.footer-be-friendns span {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400;
+}
+
+.modal-write-us {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 700;
+    color: #000000;
+  
+    background-color: #ffffff;
+}
+
+.modal-write-us h2 {
+    font-size: 45px;
+    line-height: 45px;
+    font-weight: 500;
+}
+
+.modal-write-us input,
+.modal-write-us textarea {
+  font: inherit;
+  color: rgba(68,68,68,0.5);
+  font-weight: 400;
+
+  background-color: #ffffff;
+  border: 2px solid #d7dcde;
+} 
+
+.modal-write-us input:hover,
+.modal-write-us textarea:hover {
+  border: 2px solid #b4b9bb;
+} 
+
+.modal-write-us input:focus,
+.modal-write-us textarea:focus {
+  color: rgba(68,68,68,1);
+
+  border: 2px solid #000000;
+} 
+
+.modal-write-us input:invalid,
+.modal-write-us textarea:invalid {
+  color: #e74246;
+
+  border: 2px solid #e74246;
+} 
