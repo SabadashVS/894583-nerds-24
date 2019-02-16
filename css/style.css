@@ -169,14 +169,18 @@ a {
     color: #000000;
 }
 
-.browser {
+.catalog-item-image::before {
+    content: "";
+
+    display: block;
+    width: 360px;
     height: 40px;
 
     background: url(../img/browser.svg) no-repeat;
     opacity: 0.12;
 }
 
-.catalog-item:hover > .browser {
+.catalog-item:hover > .catalog-item-image::before {
     opacity: 1;
 }
 
