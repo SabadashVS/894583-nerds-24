@@ -9,43 +9,41 @@
 </head>
 <body class="inner-page">
     <header class="main-header">
-        <div class="container">
-            <nav class="main-navigation">
-                <a class="main-header-logo" href="index.html">
-                    <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип Дизайн-студии «Нёрдс»">
-                </a>
-                <ul class="site-navigation">
-                    <li>
-                        <a href="#">Студия</a>
-                    </li>
-                    <li>
-                        <a href="#">Клиенты</a>
-                    </li>
-                    <li>
-                        <a class="site-navigation-current" href="catalog.html">Магазин</a>
-                    </li>
-                    <li>
-                        <a href="#">Контакты</a>
-                    </li>
-                </ul>
-                <ul class="cart">
-                    <li>
-                        <a href="cart.html">Корзина</a>
-                    </li>
-                </ul>
-            </nav>         
-        </div>
+        <nav class="main-navigation container">
+            <a class="main-header-logo" href="index.html">
+                <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип Дизайн-студии «Нёрдс»">
+            </a>
+            <ul class="site-navigation">
+                <li>
+                    <a href="#">Студия</a>
+                </li>
+                <li>
+                    <a href="#">Клиенты</a>
+                </li>
+                <li>
+                    <a class="site-navigation-current" href="catalog.html">Магазин</a>
+                </li>
+                <li>
+                    <a href="#">Контакты</a>
+                </li>
+            </ul>
+            <ul class="cart">
+                <li>
+                    <a href="cart.html">Корзина</a>
+                </li>
+            </ul>
+        </nav>         
     </header>  
     <main>
         <h1 class="main-title">Магазин готовых шаблонов</h1>
           
-        <div class="main-columns container">
+        <div class="catalog-grid container">
             <section class="filters">
                 <h2 class="visually-hidden">Фильтры товаров</h2>
                 <form class="filter" method="get" action="https://echo.htmlacademy.ru">
                     <fieldset>
                          <legend>Сетка:</legend>
-                         <ul class="filter-grid">
+                         <ul class="filter">
                              <li class="filter-option">
                                 <input class="visually-hidden filter-input filter-input-radio" type="radio" name="dispaly-group" id="filter-adaptive" checked>
                                 <label for="filter-adaptive">Адаптивная</label>
@@ -62,7 +60,7 @@
                     </fieldset>
                     <fieldset>
                         <legend>Особенности:</legend>
-                        <ul class="filter-features">
+                        <ul class="filter">
                             <li class="filter-option">
                                 <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="slider" id="filter-slider" checked>
                                 <label for="filter-slider">Слайдер</label>

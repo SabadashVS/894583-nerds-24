@@ -48,8 +48,6 @@ a {
 }
 
 .main-header {
-    width: 100%;
-
     background-color: #eeeeee;
 }
 
@@ -64,7 +62,6 @@ a {
 .site-navigation a,
 .cart a {
     display: block;
-    height: 34px;
 
     font-weight: 500;
     text-transform: uppercase;
@@ -74,7 +71,7 @@ a {
 
 .main-navigation {
     display: flex;
-    padding-top:50px;
+    padding-top: 50px;
     padding-bottom: 35px;
     
     font-size: 16px;
@@ -141,8 +138,8 @@ a {
 }
 
 .development-item h3 {
-    margin:25px 0;
-    padding:0;
+    margin: 25px 0;
+    padding: 0;
 
     font-size: 24px;
     line-height: 30px;
@@ -151,9 +148,9 @@ a {
 }
 
 .development-item p {
-    margin:0;
+    margin: 0;
     margin-top: -7px;
-    padding:0;
+    padding: 0;
     margin-bottom: 32px;
     width: 250px;
 
@@ -161,9 +158,6 @@ a {
 }
 
 .development-item img {
-    width: 300px;
-    height: 146px;
-
     order: -1;
 }
 
@@ -197,8 +191,8 @@ a {
     background-color: #e5a722;
 }
 
-.main-columns {
-    display:flex;
+.catalog-grid {
+    display: flex;
     justify-content: space-between;
 }
 
@@ -222,8 +216,8 @@ a {
 }
 
 .filters fieldset {
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
 
     border: none;
 }
@@ -243,26 +237,16 @@ a {
 }
 
 .filters ul {
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
 
     line-height: 20px;
     list-style: none; 
     color: #283136;
 }
 
-.filter-grid {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 100px;
-}
-
-.filter-features {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 180px;
+.filter li:not(:last-child) {
+    padding-bottom: 20px;
 }
 
 .filter-input:disabled + label {
@@ -294,8 +278,8 @@ a {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
 
     text-align: center;
     line-height: 18px;
@@ -309,8 +293,8 @@ a {
 }
 
 .catalog-item-title {
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
 
     font-size: 18px;
     line-height: 30px;
@@ -322,8 +306,8 @@ a {
 
 .item-description {
     width: 240px;
-    margin:0 auto;
-    padding:0;
+    margin: 0 auto;
+    padding: 0;
 
     text-align: center;
 }
@@ -355,19 +339,18 @@ a {
 
 .footer-social {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    padding:0;
+    width: 260px;
+    padding: 0;
     margin-right: 140px;
 
     list-style: none;
 }
 
-.footer-text {
-    display: flex;
-    flex-direction: column;
-}
-
 .footer-text b {
+    display: block;
+
     font-size: 36px;
     line-height: 36px;
     font-weight: 700;
@@ -381,11 +364,10 @@ a {
 }
 
 .modal-write-us {
-    display:flex;
-    flex-direction: column;
+    position: relative;
     width: 960px;
     height: 590px;
-    margin:0;
+    margin: 0;
     padding: 75px 100px 85px;
     box-sizing: border-box; 
     
@@ -399,10 +381,9 @@ a {
 }
 
 .modal-write-us h2 {
-    align-self: flex-start;
-    margin:0;
+    margin: 0;
     margin-bottom: 50px;
-    padding:0;
+    padding: 0;
 
     font-size: 45px;
     line-height: 45px;
@@ -410,36 +391,34 @@ a {
 }
 
 .write-us-form {
-    position: relative;
-
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
 }
 
 .write-us-form p {
-    display: flex;
-    flex-direction: column;
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
 }
 
 .btn-write-us {
     align-self: flex-start;
 }
 
-.write-us-form input:not([type=submit]) {
+.sub-message {
+    display: block;
+    margin: 35px 0 10px;
+}
+
+.write-us-form input {
+    display: block;
     width: 360px;
     height: 50px;
     margin-top: 10px;
     padding: 0 15px;
     box-sizing: border-box; 
-}
-
-.sub-message {
-    margin: 35px 0 10px;
 }
 
 .message {
@@ -452,8 +431,8 @@ a {
 
 .modal-close {
     position: absolute;
-
-    align-self: flex-end;
+    top: 80px;
+    right: 90px;
 }
 
 .modal-write-us input,
