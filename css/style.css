@@ -15,17 +15,37 @@ a {
     text-decoration: none;
 }
 
+.visually-hidden:not(:focus):not(:active),
+.filter-option .visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .button {
+    display: inline-block;
+    padding: 16px 35px;
+
     font: inherit;
     line-height: 18px;
     font-weight: 500;
-    color: #ffffff;
-  
     text-align: center;    
     vertical-align: middle;
     text-transform: uppercase;
+    color: #ffffff;
   
     background-color: #fb565a;
+    border-radius: 4px;
     border: none;
 }
 
@@ -62,6 +82,7 @@ a {
 .site-navigation a,
 .cart a {
     display: block;
+    padding-bottom: 2px;
 
     font-weight: 500;
     text-transform: uppercase;
@@ -93,11 +114,26 @@ a {
 }
 
 .cart {
-    width: 80px;
+    position: relative;
+
+    width: 115px;
     margin-top: 25px;
     margin-left:auto;
 
     text-align: right;  
+}
+
+.cart::before {
+    content: "";
+
+    position: absolute;
+    top: 7px;
+    right: 100px;
+
+    width: 15px;
+    height: 15px;
+
+    background: url(../img/cart-icon.svg) no-repeat;
 }
 
 .site-navigation a:hover,
@@ -125,7 +161,7 @@ a {
 
 .developments-list {
     display: flex;
-    padding-bottom: 80px;
+    padding: 80px 0;
 
     border-bottom: 2px solid #eeeeee;
 }
@@ -191,11 +227,6 @@ a {
     background-color: #e5a722;
 }
 
-.catalog-grid {
-    display: flex;
-    justify-content: space-between;
-}
-
 .main-title {
     margin: 0;
     margin-bottom: 60px;
@@ -208,6 +239,15 @@ a {
     color: #000000;
 
     background-color: #eeeeee;
+}
+
+.catalog-grid {
+    display: flex;
+    justify-content: space-between;
+}
+
+.filters {
+    min-width: 260px;
 }
 
 .filters h2 {
@@ -245,15 +285,68 @@ a {
     color: #283136;
 }
 
+.filters li {
+    position: relative;
+    
+    padding-left: 35px;
+}
+
 .filter li:not(:last-child) {
     padding-bottom: 20px;
+}
+
+.filter-input-radio + label::before {
+    content: "";
+
+    position: absolute;
+    top: -3px;
+    left: 0;
+
+    width: 25px;
+    height: 25px;
+
+    background: url(../img/radio-off.svg) no-repeat;
+    opacity: 0.4;
+}
+
+.filter-input-radio:checked + label::before {
+    background: url(../img/radio-on.svg) no-repeat;
+}
+
+.filter-input-checkbox + label::before {
+    content: "";
+
+    position: absolute;
+    top: -3px;
+    left: 0;
+
+    width: 27px;
+    height: 23px;
+
+    background: url(../img/checkbox-off.svg) no-repeat;
+    opacity: 0.4;
+}
+
+.filter-input-checkbox:checked + label::before {
+    background: url(../img/checkbox-on.svg) no-repeat;
 }
 
 .filter-input:disabled + label {
     opacity: 0.3;
 }
 
+.filter-input:disabled + label::before {
+    opacity: 0.1;
+}
+
+.filter-input:not([disabled]):hover + label::before,
+.filter-input:not([disabled]):focus + label::before {
+    opacity: 1;
+}
+
 .btn-filter {
+    width: 100%;
+
     color: #000000;
 
     background-color: #eeeeee;
@@ -288,13 +381,30 @@ a {
 }
 
 .catalog-item {
+    position: relative;
+
     width: 360px;
     margin-bottom: 33px;
+}
+
+.catalog-item-hover {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    
+    display: none;
+    width: 360px;
+    min-height: 231px;
+    box-sizing: border-box;
+
+    background-color: #eeeeee;
 }
 
 .catalog-item-title {
     margin: 0;
     padding: 0;
+    padding-top: 27px;
+    padding-bottom: 10px;
 
     font-size: 18px;
     line-height: 30px;
@@ -305,11 +415,29 @@ a {
 }
 
 .item-description {
-    width: 240px;
+    width: 190px;
     margin: 0 auto;
     padding: 0;
+    padding-bottom: 30px;
 
     text-align: center;
+}
+
+li:nth-child(2) .item-description,
+li:nth-child(5) .item-description,
+li:nth-child(6) .item-description {
+    width: 230px;
+}
+
+.catalog-item:hover > .catalog-item-hover {
+    display: block;
+}
+
+.catalog-item-hover .button {
+    margin-bottom: 44px;
+
+    min-width: 200px;
+    box-sizing: border-box;
 }
 
 .catalog-item-image::before {
@@ -329,6 +457,7 @@ a {
 
 .main-footer {
     display: flex;
+    align-items: center;
     padding: 70px 0;
 }
 
@@ -346,6 +475,56 @@ a {
     margin-right: 140px;
 
     list-style: none;
+}
+
+.footer-social li {
+    position: relative;
+}
+
+.social-button::before {
+    content: "";
+
+    display: block;
+    width: 78px;
+    height: 78px;
+    border-radius: 50%;
+
+    background-color: #e1e1e1;
+}
+
+.social-button::after {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: block;
+    width: 78px;
+    height: 78px;
+
+    background: url(../img/vk-icon.svg) 50% 50% no-repeat;
+}
+
+.fb::after {
+    background: url(../img/fb-icon.svg) 50% 50% no-repeat;
+}
+
+.inst::after {
+    background: url(../img/insta-icon.svg) 50% 50% no-repeat;
+}
+
+.social-button:hover::before,
+.social-button:focus::before {
+    background-color: #e74246;
+}
+
+.social-button:active::before {
+    background-color: #d7373b;
+}
+
+.footer-social li:active > .social-button::after {
+    opacity: 0.3;
 }
 
 .footer-text b {
@@ -368,7 +547,7 @@ a {
     width: 960px;
     height: 590px;
     margin: 0;
-    padding: 75px 100px 85px;
+    padding: 69px 100px 85px;
     box-sizing: border-box; 
     
     font-size: 16px;
@@ -382,7 +561,7 @@ a {
 
 .modal-write-us h2 {
     margin: 0;
-    margin-bottom: 50px;
+    margin-bottom: 41px;
     padding: 0;
 
     font-size: 45px;
@@ -405,6 +584,7 @@ a {
 
 .btn-write-us {
     align-self: flex-start;
+    min-width: 260px;
 }
 
 .sub-message {
@@ -431,8 +611,34 @@ a {
 
 .modal-close {
     position: absolute;
-    top: 80px;
+    top: 78px;
     right: 90px;
+
+    padding: 0;
+    margin: 0;
+
+    background-color: transparent;
+    border: none;
+}
+
+.modal-close::before {
+    content: "";
+
+    display: block;
+    width: 21px;
+    height: 21px;
+
+    background: url(../img/close-cross.svg) no-repeat;
+    opacity: 0.3;
+}
+
+.modal-close:hover::before,
+.modal-close:focus::before {
+    opacity: 1;
+}
+
+.modal-close:active::before {
+    opacity: 0.1;
 }
 
 .modal-write-us input,
@@ -443,6 +649,7 @@ a {
 
     background-color: #ffffff;
     border: 2px solid #d7dcde;
+    border-radius: 4px;
 } 
 
 .modal-write-us input:hover,

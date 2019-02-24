@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Магазин готовых шаблонов</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
@@ -157,13 +157,19 @@
     <footer class="main-footer container">
         <ul class="footer-social">
             <li>
-                <a class="social-button vk" href="#">Вконтакте</a>
+                <a class="social-button vk" href="#">
+                    <span class="visually-hidden">Вконтакте</span>
+                </a>
             </li>
             <li>
-                <a class="social-button fb" href="#">Фейсбук</a>
+                <a class="social-button fb" href="#">
+                    <span class="visually-hidden">Фейсбук</span>
+                </a>
             </li>
             <li>
-                <a class="social-button inst" href="#">Инстаграм</a>
+                <a class="social-button inst" href="#">
+                    <span class="visually-hidden">Инстаграм</span>
+                </a>
             </li>
         </ul>
         <p class="footer-text">
@@ -189,7 +195,9 @@
             </p>
             <button class="button btn-write-us" type="submit">Отправить</button>
         </form>
-        <button class="modal-close" type="button">Закрыть</button>
+        <button class="modal-close" type="button">
+            <span class="visually-hidden">Закрыть</span>
+        </button>
     </section>
 </body>
 </html>
