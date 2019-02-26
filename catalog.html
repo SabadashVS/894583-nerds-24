@@ -41,6 +41,22 @@
             <section class="filters">
                 <h2 class="visually-hidden">Фильтры товаров</h2>
                 <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+                    <fieldset class="filter-item">
+                        <legend>Стоимость:</legend>
+                        <div class="range-filter">
+                            <div class="range-controls">
+                                <div class="scale">
+                                    <div class="bar"></div>
+                                </div>
+                                <div class="toggle toggle-min"></div>
+                                <div class="toggle toggle-max"></div>
+                            </div>
+                            <div class="price-controls">
+                                <label class="min-price">от <input name="min-price" type="text" value="0"></label>
+                                <label class="max-price">до <input name="max-price" type="text" value="15000"></label>
+                            </div>
+                        </div>
+                    </fieldset>
                     <fieldset>
                          <legend>Сетка:</legend>
                          <ul class="filter">
@@ -88,6 +104,35 @@
             </section>
             
             <section class="catalog">
+
+                <h2 class="visually-hidden">Каталог</h2>
+
+                <div class="catalog-sorting">
+                    <h3>Сортировать:</h3>
+                    <ul class="sorting-type">
+                        <li>
+                            <a href="#" class="sorting-type-current">По цене</a>
+                        </li>
+                        <li>
+                            <a href="#">По типу</a>
+                        </li>
+                        <li>
+                            <a href="#">По названию</a>
+                        </li>
+                    </ul>
+                    <ul class="sorting-direction">
+                        <li>
+                            <a href="#" class="direction-down sorting-direction-current">
+                                <span class="visually-hidden">По убыванию</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="direction-up">
+                                <span class="visually-hidden">По возрастанию</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
                 <ul class="catalog-list">
                     <li class="catalog-item">
                         <div class="catalog-item-hover">
@@ -150,8 +195,39 @@
                         </div>          
                     </li>
                 </ul>
+                <ul class="pagination-list">
+                    <li class="pagination-item pagination-item-current"><a>1</a></li>
+                    <li class="pagination-item"><a href="#">2</a></li>
+                    <li class="pagination-item"><a href="#">3</a></li>
+                    <li class="pagination-item paginator-next-page"><a href="#">Следующая</a></li>
+                </ul>
             </section>
         </div>
+
+        <section class="contacts">
+
+            <h2 class="visually-hidden">Контакты</h2>
+                
+            <div class="contacts-centering"></div>
+                <div class="map">
+                    <img src="img/map.jpg" width="1440" height="416" alt="Наш адрес на карте">
+                    <div class="write-us">
+                        <h3>NЁRDS DESIGN STUDIO</h3>
+                        <address>
+                            <p class="adress">
+                                191186, Санкт-Петербург, 
+                                ул. Б. Конюшенная, д. 19/8
+                            </p>
+                            <p class="phone">
+                            тел. +7 (812) 275-75-75
+                            </p>
+                        </address>
+                        <button class="button btn-contacts" type="button">Напишите нам</button>
+                    </div>
+                </div>
+            </div>
+    
+        </section>
         
     </main>  
     <footer class="main-footer container">
