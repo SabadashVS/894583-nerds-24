@@ -53,6 +53,8 @@ a {
 .button:hover,
 .button:focus {
     background-color: #e74246;
+
+    transition: 0.3s all;
 }
 
 .button:active {
@@ -108,9 +110,15 @@ a {
 
 .site-navigation {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     width: 440px;
     margin-top: 25px;
+    margin-right: 60px;
+}
+
+.site-navigation li:not(:last-child) {
+    margin-right: 20px;
 }
 
 .cart {
@@ -141,6 +149,8 @@ a {
 .cart a:hover,
 .cart a:focus {
     color: #fb565a;
+
+    transition: 0.3s all;
 }
 
 .site-navigation a:active,
@@ -287,11 +297,18 @@ a {
     padding: 16px 0;
 }
 
+.developments {
+    border-bottom: 2px solid #eeeeee;
+}
+
 .developments-list {
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1200px; 
     padding: 80px 0;
-
-    border-bottom: 2px solid #eeeeee;
+    margin-right: -100px;
+    margin-bottom: -40px;
 }
 
 .development-item {
@@ -299,6 +316,7 @@ a {
     flex-direction: column;
     width: 300px;
     margin-right: 100px;
+    margin-bottom: 40px;
 }
 
 .development-item h3 {
@@ -336,6 +354,8 @@ a {
 .btn-buy-app:hover,
 .btn-buy-app:focus {
     background-color: #00bc6c;
+
+    transition: 0.3s all;
 }
 
 .btn-buy-app:active {
@@ -349,6 +369,8 @@ a {
 .btn-buy-presentation:hover,
 .btn-buy-presentation:focus {
     background-color: #eab534;
+
+    transition: 0.3s all;
 }
 
 .btn-buy-presentation:active {
@@ -370,6 +392,7 @@ a {
 
 .about-us {
     width: 650px;
+    margin-right: 60px;
 }
 
 .about-us b {
@@ -429,6 +452,7 @@ a {
 .our-statistics {
     align-self: flex-end;
     width: 360px;
+    margin-top: 200px;
 
     border-collapse: collapse;
 }
@@ -469,6 +493,8 @@ a {
 }
 
 .clients {
+    margin-bottom: 80px;
+
     border-bottom: 2px solid #eeeeee;
 }
 
@@ -500,6 +526,8 @@ a {
 .clients-list li:hover,
 .clients-list li:focus {
     opacity: 1;
+
+    transition: 0.3s all;
 }
 
 .clients-list li:active {
@@ -507,24 +535,37 @@ a {
 }
 
 .contacts {
-    background-color: #e9e5dc;
+    position: relative;
+    
+    min-height: 416px;
+
+    background: #e9e5dc url(../img/map.jpg) 50% 50% no-repeat;
 }
 
 .map {
+    position: absolute;
+    top: 0;
+    z-index: 98;
+
+    width: 100%;
+    height: 100%;
+}
+
+.write-us-position {
     position: relative;
 
-    width: 1440px;
-    height: 416px;
+    max-width: 1200px;
+    min-height: 416px;
     margin: 0 auto;
-    margin-top: 60px;
+    padding: 54px 20px;
+    box-sizing: border-box;
 }
 
 .write-us {
-    position: absolute;
-    top: 55px;
-    left: 140px;
+    position: relative;
+    z-index: 99;
 
-    min-width: 319px;
+    width: 319px;
     min-height: 308px;
     padding: 48px 50px;
     box-sizing: border-box;
@@ -535,7 +576,7 @@ a {
 .write-us h3 {
     margin: 0;
     padding: 0;
-    margin-bottom: 20px;
+    margin-bottom: 23px;
 
     font-size: 18px;
     line-height: 30px;
@@ -554,12 +595,12 @@ a {
 
 .write-us .adress {
     width: 210px;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 
 .btn-contacts {
     min-width: 219px;
-    margin-top: 35px;
+    margin-top: 36px;
 }
 
 .main-title {
@@ -775,6 +816,8 @@ a {
 .filter-input:not([disabled]):hover + label::before,
 .filter-input:not([disabled]):focus + label::before {
     opacity: 1;
+
+    transition: 0.3s all;
 }
 
 .btn-filter {
@@ -788,6 +831,8 @@ a {
 .btn-filter:hover,
 .btn-filter:focus {
     background-color: #dfdfdf;
+
+    transition: 0.3s all;
 }
 
 .btn-filter:active {
@@ -865,15 +910,6 @@ a {
     opacity: 0.3;
 }
 
-.catalog-sorting a:hover,
-.catalog-sorting a:focus,
-.direction-up:hover::after,
-.direction-up:focus::after,
-.direction-down:hover::after,
-.direction-down:focus::after {
-    opacity: 0.6;
-}
-
 .catalog-sorting a:active,
 .direction-up:active::after,
 .direction-down:active::after,
@@ -882,8 +918,21 @@ a {
     opacity: 1;
 }
 
+.catalog-sorting a:hover,
+.catalog-sorting a:focus,
+.direction-up:hover::after,
+.direction-up:focus::after,
+.direction-down:hover::after,
+.direction-down:focus::after {
+    opacity: 0.6;
+
+    transition: 0.3s all;
+}
+
 .catalog {
     width: 760px;
+    margin-bottom: 60px;
+    margin-left: 40px;
 }
 
 .catalog-list {
@@ -892,6 +941,7 @@ a {
     flex-wrap: wrap;
     margin: 0;
     padding: 0;
+    margin-right: -40px;
 
     text-align: center;
     line-height: 18px;
@@ -904,6 +954,7 @@ a {
 
     width: 360px;
     margin-bottom: 30px;
+    margin-right: 40px;
 }
 
 .catalog-item-hover {
@@ -948,8 +999,20 @@ li:nth-child(6) .item-description {
     width: 230px;
 }
 
+@keyframes emerging {
+    0% {
+        transform: translateY(150px);
+    }
+  
+    100% {
+        transform: translateY(0);
+    }
+}
+
 .catalog-item:hover > .catalog-item-hover {
     display: block;
+
+    animation: emerging 0.5s;
 }
 
 .catalog-item-hover .button {
@@ -972,6 +1035,8 @@ li:nth-child(6) .item-description {
 
 .catalog-item:hover > .catalog-item-image::before {
     opacity: 1;
+
+    transition: 0.5s all;
 }
 
 .pagination-list {
@@ -1003,6 +1068,7 @@ li:nth-child(6) .item-description {
     color: #000000;
   
     background-color: #eeeeee;
+    border-radius: 3px;
 }
 
 .paginator-next-page {
@@ -1015,11 +1081,14 @@ li:nth-child(6) .item-description {
     vertical-align: middle;
     text-transform: uppercase;
 
+    border-radius: 3px;
 }
 
 .pagination-item a:hover,
 .pagination-item a:focus {
     background-color: #dfdfdf;
+
+    transition: 0.3s all;
 }
   
 .pagination-item a:active {
@@ -1048,7 +1117,8 @@ li:nth-child(6) .item-description {
 .main-footer {
     display: flex;
     align-items: center;
-    padding: 54px 0;
+    flex-wrap: wrap;
+    padding: 39px 20px;
 }
 
 .main-footer a {
@@ -1058,10 +1128,11 @@ li:nth-child(6) .item-description {
 
 .footer-social {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    width: 260px;
+    flex-wrap: wrap;
+    width: 273px;
     padding: 0;
+    margin-left: -13px;
     margin-right: 140px;
 
     list-style: none;
@@ -1069,6 +1140,8 @@ li:nth-child(6) .item-description {
 
 .footer-social li {
     position: relative;
+
+    margin: 13px 0;
 }
 
 .social-button::before {
@@ -1077,9 +1150,10 @@ li:nth-child(6) .item-description {
     display: block;
     width: 78px;
     height: 78px;
-    border-radius: 50%;
+    margin-left: 13px;
 
     background-color: #e1e1e1;
+    border-radius: 50%;
 }
 
 .social-button::after {
@@ -1107,10 +1181,14 @@ li:nth-child(6) .item-description {
 .social-button:hover::before,
 .social-button:focus::before {
     background-color: #e74246;
+
+    transition: 0.3s all;
 }
 
 .social-button:active::before {
     background-color: #d7373b;
+
+    transition: 0.3s all;
 }
 
 .footer-social li:active > .social-button::after {
@@ -1132,10 +1210,83 @@ li:nth-child(6) .item-description {
     font-weight: 400;
 }
 
+@keyframes bounce {
+    0% {
+        transform: translateY(-2000px);
+    }
+  
+    70% {
+        transform: translateY(30px);
+    }
+  
+    90% {
+        transform: translateY(-10px);
+    }
+  
+    100% {
+        transform: translateY(0);
+    }
+}
+  
+@keyframes shake {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+  
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateX(-10px);
+    }
+  
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(10px);
+    }
+}
+
+@keyframes blinking {
+    0%,
+    100% {
+        border-color: #d7dcde;
+    }
+  
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        border-color: #e74246;
+    }
+  
+    20%,
+    40%,
+    60%,
+    80% {
+        border-color: #d7dcde;
+    }
+}
+
+@keyframes close {
+    0% {
+        transform: translateY(0);
+    }
+  
+    100% {
+        transform: translateY(2000px);
+    }
+}
+
 .modal-write-us {
     position: fixed;
     left: 50%;
     bottom: 180px;
+    z-index: 100;
 
     display: none;
     width: 960px;
@@ -1152,6 +1303,24 @@ li:nth-child(6) .item-description {
   
     background-color: #ffffff;
     box-shadow: 0px 20px 40px 0 rgba(0, 1, 1, 0.75);
+}
+
+.modal-show {
+    display: block;
+    
+    animation: bounce 0.6s;
+}
+
+.modal-close-animation {
+    animation: close 0.6s;
+}
+
+.modal-error {
+    animation: shake 0.6s;
+}
+
+.modal-blinking {
+    animation: blinking 0.6s;
 }
 
 .modal-write-us h2 {
