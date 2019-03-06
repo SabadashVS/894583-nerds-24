@@ -1,7 +1,7 @@
 // Модальное окно
 
 var BtnContacts = document.querySelector(".btn-contacts");
-  
+
 var popup = document.querySelector(".modal-write-us");
 var close = popup.querySelector(".modal-close");
 
@@ -38,14 +38,14 @@ try {
 BtnContacts.addEventListener("click", function (evt) {
     evt.preventDefault();
     popup.classList.add("modal-show");
-  
+
     if (storageName) {
         userName.value = storageName;
         email.focus();
     } else {
         name.focus();
     }
-    
+
     if (storageEmail) {
         email.value = storageEmail;
         message.focus();
@@ -110,22 +110,22 @@ window.addEventListener("keydown", function (evt) {
 
 var latlng = new google.maps.LatLng("59.939109", "30.321458");
 var myOptions = {
-zoom: 17,
-center: latlng,
-navigationControlOptions: {
-style: google.maps.NavigationControlStyle.SMALL
-},
-mapTypeId: google.maps.MapTypeId.ROADMAP
+    zoom: 17,
+    center: latlng,
+    navigationControlOptions: {
+        style: google.maps.NavigationControlStyle.SMALL
+    },
+    mapTypeId: google.maps.MapTypeId.ROADMAP
 };
 var map = new google.maps.Map(document.getElementById("makemap_canvas"),myOptions);
 map.scrollwheel=true;
 map.setOptions({ mapTypeControl:true});
 var marker = new google.maps.Marker({
-	position: {lat: 59.938738, lng: 30.323758},
-	map: map,
-	title: 'NЁRDS DESIGN STUDIO',
-	icon: {
-		url: "img/map-marker.png",
-		scaledSize: new google.maps.Size(231,190)
-	}
+    position: {lat: 59.938738, lng: 30.323758},
+    map: map,
+    title: 'NЁRDS DESIGN STUDIO',
+    icon: {
+        url: "img/map-marker.png",
+        scaledSize: new google.maps.Size(231,190)
+    }
 });
